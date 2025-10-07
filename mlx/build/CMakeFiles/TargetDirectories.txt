@@ -1,0 +1,7 @@
+/Users/mbarhoun/Desktop/mo_cub/cub_3d/mlx/build/CMakeFiles/mlx42.dir
+/Users/mbarhoun/Desktop/mo_cub/cub_3d/mlx/build/CMakeFiles/edit_cache.dir
+/Users/mbarhoun/Desktop/mo_cub/cub_3d/mlx/build/CMakeFiles/rebuild_cache.dir
+/Users/mbarhoun/Desktop/mo_cub/cub_3d/mlx/build/CMakeFiles/list_install_components.dir
+/Users/mbarhoun/Desktop/mo_cub/cub_3d/mlx/build/CMakeFiles/install.dir
+/Users/mbarhoun/Desktop/mo_cub/cub_3d/mlx/build/CMakeFiles/install/local.dir
+/Users/mbarhoun/Desktop/mo_cub/cub_3d/mlx/build/CMakeFiles/install/strip.dir
