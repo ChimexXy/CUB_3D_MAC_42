@@ -30,9 +30,14 @@ SRC = 	cub3d.c								\
 		./parsing/utils/utils02.c			\
 		./parsing/utils/utils03.c 			\
 		./parsing/utils/utils04.c 			\
+		./raycasting/draw_map.c				\
+		./raycasting/init_data.c			\
+		./raycasting/key_mlx.c				\
 		./raycasting/move.c					\
 		./raycasting/raycasting.c			\
-		./raycasting/direction.c			\
+		./raycasting/raycasting2.c			\
+		./raycasting/render.c				\
+		./raycasting/win_mlx.c				\
 
 HDR = 	cub3d.h	./raycasting/raycasting.h	\
 
