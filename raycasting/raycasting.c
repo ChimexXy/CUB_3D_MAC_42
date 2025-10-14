@@ -6,13 +6,11 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:41:36 by mozahnou          #+#    #+#             */
-/*   Updated: 2025/10/07 16:46:22 by mozahnou         ###   ########.fr       */
+/*   Updated: 2025/10/14 13:34:42 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "raycasting.h"
-
-
 
 void	perform_dda(t_config *cfg, t_ray *ray)
 {
