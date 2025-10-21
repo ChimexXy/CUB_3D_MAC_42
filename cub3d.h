@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 21:18:06 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/09/29 21:41:36 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/10/19 11:55:53 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ typedef struct s_textures
 }	t_textures;
 
 typedef struct s_player {
-    double x;   // position X in map (floating point!)
-    double y;   // position Y in map (floating point!)
+    double x;
+    double y;
     int move_up;
     int move_down;
     int move_left;
@@ -65,10 +65,6 @@ typedef struct s_ray
 	int		side;
 }	t_ray;
 
-
-   
-
-
 typedef struct s_config
 {
 	char		**map;
@@ -81,13 +77,11 @@ typedef struct s_config
 	float		dir_y;
 	float		plane_x;
 	float		plane_y;
-	////////////////// raycast
-	mlx_t       *mlx;        // MLX42 instance
-    mlx_image_t *img;   
-	t_player player;
-	t_ray *rays;  // Array to store ray data for visualization
-    int num_rays;
-
+	mlx_t		*mlx;
+    mlx_image_t	*img;   
+	t_player	player;
+	t_ray	*rays;
+    int		num_rays;
 }	t_config;
 
 #endif
