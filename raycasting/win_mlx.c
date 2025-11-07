@@ -6,13 +6,13 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:44:36 by mozahnou          #+#    #+#             */
-/*   Updated: 2025/10/14 13:48:19 by mozahnou         ###   ########.fr       */
+/*   Updated: 2025/11/07 19:02:48 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "raycasting.h"
 
-void	draw_vertical_line(t_config *cfg, int x, int start, int end, uint32_t color)
+void	draw_vertical_line(t_config *cfg, int x, int start, int end)
 {
 	int	y;
 
@@ -20,7 +20,7 @@ void	draw_vertical_line(t_config *cfg, int x, int start, int end, uint32_t color
 	while (y <= end)
 	{
 		if (x >= 0 && x < WIN_W && y >= 0 && y < WIN_H)
-			mlx_put_pixel(cfg->img, x, y, color);
+			mlx_put_pixel(cfg->img, x, y, cfg->color);
 		y++;
 	}
 }

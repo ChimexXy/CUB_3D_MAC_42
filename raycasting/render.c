@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:39:26 by mozahnou          #+#    #+#             */
-/*   Updated: 2025/10/14 13:34:58 by mozahnou         ###   ########.fr       */
+/*   Updated: 2025/11/07 18:56:25 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	render_frame(void *param)
 	t_config	*cfg;
 
 	cfg = (t_config *)param;
-	memset(cfg->img->pixels, 0,
+	ft_memset(cfg->img->pixels, 0,
 		cfg->img->width * cfg->img->height * sizeof(uint32_t));
 	update_player_position(cfg);
 	raycasting(cfg);

@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 21:18:06 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/10/19 11:55:53 by mozahnou         ###   ########.fr       */
+/*   Updated: 2025/11/07 19:02:33 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ typedef struct s_config
 	t_player	player;
 	t_ray	*rays;
     int		num_rays;
+	uint32_t color;
 }	t_config;
 
 #endif

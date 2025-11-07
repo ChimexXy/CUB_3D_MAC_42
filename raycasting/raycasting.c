@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:41:36 by mozahnou          #+#    #+#             */
-/*   Updated: 2025/10/19 11:59:22 by mozahnou         ###   ########.fr       */
+/*   Updated: 2025/11/07 19:03:56 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ void	cast_single_ray(t_config *cfg, int x)
 	double		wall_dist;
 	int			draw_start;
 	int			draw_end;
-	uint32_t	color;
 
 	init_ray_direction(cfg, x, &ray);
 	init_delta_dist(&ray);
@@ -72,10 +71,10 @@ void	cast_single_ray(t_config *cfg, int x)
 	wall_dist = calc_wall_dist(&ray);
 	calc_draw_bounds(wall_dist, &draw_start, &draw_end);
 	if (ray.side == 1)
-		color = 0xFF0000FF;
+		cfg->color = 0xFF0000FF;
 	else
-		color = 0x0000FFFF;
-	draw_vertical_line(cfg, x, draw_start, draw_end, color);
+		cfg->color = 0x0000FFFF;
+	draw_vertical_line(cfg, x, draw_start, draw_end);
 }
 
 void	raycasting(t_config *cfg)

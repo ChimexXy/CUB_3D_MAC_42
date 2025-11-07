@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:42:05 by mozahnou          #+#    #+#             */
-/*   Updated: 2025/10/19 12:00:37 by mozahnou         ###   ########.fr       */
+/*   Updated: 2025/11/07 19:03:42 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,17 @@
 # define WIN_H 1080
 # define CELL 40   // size of 1 map cell in pixels
 
+typedef struct s_norm
+{
+	int	px;
+	int	py;
+	int	size;
+	int	y;
+	int	x;
+	int	start_x;
+	int	start_y;
+}	t_norm;
+
 //draw_map//
 void	draw_map(t_config *cfg);
 void	draw_player(t_config *cfg);
@@ -32,6 +43,8 @@ void	draw_cell(t_config *cfg, int map_x, int map_y, uint32_t color);
 //init_data//
 void	init_player_flags(t_config *cfg);
 void	init_player_direction(t_config *cfg, char c);
+void	init_player_direction1(t_config *cfg, char c);
+void	*ft_memset(void *b, int c, size_t len);
 
 //key_mlx//
 void	set_key_state(mlx_key_data_t key, t_config *cfg, int press);
@@ -64,6 +77,6 @@ void	render_2d_map(t_config *cfg);
 void	render_frame(void *param);
 
 //win_mlx//
-void	draw_vertical_line(t_config *cfg, int x, int start, int end, uint32_t color);
+void	draw_vertical_line(t_config *cfg, int x, int start, int end);
 int		init_mlx(t_config *cfg);
 #endif

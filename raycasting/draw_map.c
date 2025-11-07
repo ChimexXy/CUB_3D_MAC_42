@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:38:08 by mozahnou          #+#    #+#             */
-/*   Updated: 2025/10/19 11:52:33 by mozahnou         ###   ########.fr       */
+/*   Updated: 2025/11/07 19:04:29 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,30 +64,25 @@ void	set_player_position(t_config *cfg)
 
 void	draw_player(t_config *cfg)
 {
-	int	px;
-	int	py;
-	int	size;
-	int	y;
-	int	x;
-	int	start_x;
-	int	start_y;
+	t_norm	*norm;
 
-	y = 0;
-	size = CELL / 3;
-	px = (int)(cfg->player.x * CELL);
-	py = (int)(cfg->player.y * CELL);
-	start_x = px - (size / 2);
-	start_y = py - (size / 2);
-	while (y < size)
+	norm = NULL;
+	norm->y = 0;
+	norm->size = CELL / 3;
+	norm->px = (int)(cfg->player.x * CELL);
+	norm->py = (int)(cfg->player.y * CELL);
+	norm->start_x = norm->px - (norm->size / 2);
+	norm->start_y = norm->py - (norm->size / 2);
+	while (norm->y < norm->size)
 	{
-		x = 0;
-		while (x < size)
+		norm->x = 0;
+		while (norm->x < norm->size)
 		{
-			mlx_put_pixel(cfg->img, (uint32_t)(start_x + x),
-				(uint32_t)(start_y + y), 0xFF0000FF);
-			x++;
+			mlx_put_pixel(cfg->img, (uint32_t)(norm->start_x + norm->x),
+				(uint32_t)(norm->start_y + norm->y), 0xFF0000FF);
+			norm->x++;
 		}
-		y++;
+		norm->y++;
 	}
 }
 
