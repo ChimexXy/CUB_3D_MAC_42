@@ -6,17 +6,18 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 21:18:06 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/11/07 19:02:33 by mozahnou         ###   ########.fr       */
+/*   Updated: 2025/11/11 10:51:36 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
 
+# include <math.h>
+# include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <fcntl.h>
 # include <stdbool.h>
 # include "./libft/libft.h"
 # include "./parsing/parsing.h"
@@ -80,9 +81,9 @@ typedef struct s_config
 	mlx_t		*mlx;
     mlx_image_t	*img;   
 	t_player	player;
-	t_ray	*rays;
-    int		num_rays;
-	uint32_t color;
+	t_ray		*rays;
+    int			num_rays;
+	uint32_t 	color;
 }	t_config;
 
 #endif

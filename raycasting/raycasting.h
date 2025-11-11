@@ -6,7 +6,7 @@
 /*   By: mozahnou <mozahnou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:42:05 by mozahnou          #+#    #+#             */
-/*   Updated: 2025/11/07 19:03:42 by mozahnou         ###   ########.fr       */
+/*   Updated: 2025/11/11 10:51:25 by mozahnou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define RAYCASTING_H
 
 # include "./../cub3d.h"
-# include <math.h>
-# include <string.h>
 
 # define MOVE_SPEED 0.025
 # define ROT_SPEED 0.03
@@ -79,4 +77,5 @@ void	render_frame(void *param);
 //win_mlx//
 void	draw_vertical_line(t_config *cfg, int x, int start, int end);
 int		init_mlx(t_config *cfg);
+
 #endif
